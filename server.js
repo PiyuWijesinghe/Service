@@ -10,7 +10,11 @@ const workerRoutes = require('./routes/worker.routes');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3001', // frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 const connectDB = async () => {
     try {
