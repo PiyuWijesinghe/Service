@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:3001', 'http://localhost:3002', 'https://serviceadmin-app.netlify.app/'],
+  origin: ['https://servicecustomer-app.netlify.app', 'https://servicecoordinator-app.netlify.app', 'https://serviceadmin-app.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
 }));
